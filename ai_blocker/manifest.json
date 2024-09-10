@@ -1,16 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "My First Chrome Extension",
-    "version": "1.0",
-    "description": "A simple Chrome extension example.",
-    "permissions": ["storage"],
-    "action": {
-      "default_popup": "./src/popup.html",
-      "default_icon": {
-        "16": "./src/assets/images/icon16.png",
-        "48": "./src/assets/images/icon48.png",
-        "128": "./src/assets/images/icon128.png"
-      }
+  "manifest_version": 3,
+  "name": "Skippy Blocker",
+  "version": "1.0",
+  "description": "Blocks AI-related content on websites.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "./src/index.html",
+    "default_icon": {
+      "16": "./src/assets/images/icon16.png",
+      "48": "./src/assets/images/icon48.png",
+      "128": "./src/assets/images/icon128.png"
     }
-  }
-  
+  },
+  "background": {
+    "service_worker": "./src/scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./src/scripts/content.js"]
+    }
+  ]
+}

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/popup.css">
 </head>
+
 <body>
-    <h1>My Extension</h1>
-    <button id="myButton">Click Me</button>
-  
+    <main class="popup_container">
+        <div class="title_container">
+          <h1>Skippy Block</h1>
+        </div>
+        
+        <p>Click the button to activate the AI content blocker:</p>
+        <button id="toggleBlocker">Activate AI Blocker</button>
+
+    </main>
     <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,15 @@
+.popup_container {
+    display: grid;
+    height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #c4c4c4;
+    padding: 1rem;
+    width: 100%;
+    min-width: 200px;
+}
+
+.title_container {
+    text-align: center;
+}
